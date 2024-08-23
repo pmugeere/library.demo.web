@@ -1,0 +1,16 @@
+services:
+  library-demo-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    networks:
+      - library_demo_web
+
+networks:
+  library_demo_web:
+    external: true
+      
