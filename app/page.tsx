@@ -1,20 +1,10 @@
-import Image from "next/image";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../lib/auth/authOptions";
-import { useSession, signIn } from "next-auth/react";
+import { auth } from "../lib/auth/authOptions"
+import { redirect } from 'next/navigation';
 
 export default async function Home() {
-  const session = await getServerSession(authOptions);
-
-
-  if (!session) {
-    // Redirect to sign-in page if not authenticated
-    return (
-      <div>
-        <h1>You are not signed in</h1>
-        <a href="/api/auth/signin">Sign In</a>
-      </div>
-    );
+  const session = await auth();
+  if(session == null){
+    return redirect("api/auth/signin")
   }
 
   return (
