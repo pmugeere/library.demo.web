@@ -1,6 +1,6 @@
 import NextAuth from "next-auth"
-import { authProviders } from "./authProviders"
-import { authCallBacks } from "./authCallBacks"
+import { authProviders } from "./auth-providers"
+import { authCallBacks } from "./auth-callbacks"
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
     providers: authProviders,

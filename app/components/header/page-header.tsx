@@ -1,12 +1,11 @@
 'use client'
 
-import { FC } from "react";
 import {SignInSignOut} from "@/app/components/auth";
 import { SearchInput } from "@/app/components/shared/SearchInput";
-import NavigationLinks from "@/app/components/header/NavigationLinks";
+import {NavigationLinks} from "@/app/components/header";
 import { useSession } from "next-auth/react";
 
-const Header: FC= () => {
+const Header = () => {
     const { data: session, status } = useSession()
     return (
         <header className="py-2 border-neutral-40 border-b">
