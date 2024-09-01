@@ -1,20 +1,20 @@
 'use client'
 
-import { Session } from "next-auth";
 import { FC } from "react";
-import LoginLogoutLink from "./LoginLogoutLink";
-import { SearchInput } from "../shared/SearchInput";
-import NavigationLinks from "./NavigationLinks";
+import {SignInSignOut} from "@/app/components/auth";
+import { SearchInput } from "@/app/components/shared/SearchInput";
+import NavigationLinks from "@/app/components/header/NavigationLinks";
+import { useSession } from "next-auth/react";
 
-const Header: FC<{ session: Session | null }> = ({ session }) => {
-
+const Header: FC= () => {
+    const { data: session, status } = useSession()
     return (
         <header className="py-2 border-neutral-40 border-b">
             <div className="max-w-[1280px] px-4 md:px-8 mx-auto">
                 <div className="mb-2 h-11 hidden md:flex md:mb-4 md:items-center">
                     <div className="mr-auto flex gap-x-4">
                     </div>
-                    <LoginLogoutLink session={session} />
+                    <SignInSignOut session={session}/>
                 </div>
             </div>
             <div className='max-w-md mx-auto'>
