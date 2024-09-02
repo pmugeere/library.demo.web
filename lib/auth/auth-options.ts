@@ -15,7 +15,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
     providers: authProviders,
     callbacks: authCallBacks,
     pages: {
-        signIn: "/auth/profile/signin"
+        signIn: "/auth/signin"
     },
     // jwt: true, // Enable JWT tokens
     // debug: true, // Enable debug messages in the console

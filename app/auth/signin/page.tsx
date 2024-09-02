@@ -2,7 +2,7 @@
 
 import { providerMap } from "@/lib/auth/auth-options"
 import { useSearchParams } from "next/navigation"
-import {signinWith} from "@/app/auth/profile/signin/signin-with"
+import {signinWith} from "@/app/auth/signin/signin-with"
 
 export default async function SignInPage() {
 

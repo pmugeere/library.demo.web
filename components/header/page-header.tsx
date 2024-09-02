@@ -1,8 +1,8 @@
 'use client'
 
-import {SignInSignOut} from "@/app/components/auth";
-import { SearchInput } from "@/app/components/shared/SearchInput";
-import {NavigationLinks} from "@/app/components/header";
+import {SignInSignOut} from "@/components/auth";
+import { SearchInput } from "@/components/shared/SearchInput";
+import {NavigationLinks} from "@/components/header";
 import { useSession } from "next-auth/react";
 
 const Header = () => {
