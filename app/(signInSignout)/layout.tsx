@@ -9,7 +9,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="max-w-[1280px] px-4 md:px-8 mx-auto py-6">
+        <div className="max-w-[1280px] px-4 md:px-8 mx-auto py-60">
           {children}
         </div>
       </body>
