@@ -1,6 +1,6 @@
 "use client"
 
-import { providerMap } from "@/lib/auth/auth-options"
+import { providerMap } from "@/lib/auth/auth-providers"
 import { useSearchParams } from "next/navigation";
 import {signInUser} from "@/lib/signin-action";
 
