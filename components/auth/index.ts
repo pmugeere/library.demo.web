@@ -1,1 +1,1 @@
-export {default as SignInSignOut} from "./signIn-signOut"
+export {default as AuthLink} from "./auth-link"

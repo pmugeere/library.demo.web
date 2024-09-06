@@ -2,7 +2,7 @@
 
 import { PersonOutlineIcon } from '../shared/Icons';
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { useSession } from "next-auth/react";
 
 
 const getAuthStatus = (session: any) => {
@@ -13,7 +13,8 @@ const getAuthStatus = (session: any) => {
     return { authUrl, authLabel };
 }
 
-const SignInSignOut: FC<{ session: any }> = ({ session }) => {
+const AuthLink = () => {
+    const { data: session, status } = useSession()
     const { authUrl, authLabel } = getAuthStatus(session);
     return (
         <a href={authUrl} className="flex items-center text-sm font-sans text-core-neutral-900 gap-x-2 font-medium">
@@ -23,4 +24,4 @@ const SignInSignOut: FC<{ session: any }> = ({ session }) => {
     )
 }
 
-export default SignInSignOut;
+export default AuthLink;
