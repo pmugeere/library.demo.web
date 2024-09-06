@@ -17,12 +17,5 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
     pages: {
         signIn: "/auth/signin"
     },
-    // jwt: true, // Enable JWT tokens
-    // debug: true, // Enable debug messages in the console
-    // logger: true, // Enable logging to the console
-    // session: {
-    //     strategy: "jwt",
-    //     maxAge: 0 * 0 * 5 * 60, // 5 minutes for testing
-    //  },
     secret: process.env.NEXTAUTH_SECRET
 });

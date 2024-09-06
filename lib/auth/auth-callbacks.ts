@@ -15,5 +15,17 @@ export const authCallBacks: NextAuthConfig["callbacks"] =
             session.accessToken = token.accessToken as string;
         }
         return session;
-    }
+    },
+    async redirect({ url, baseUrl }) {
+        console.log("url: ",url);
+        
+        console.log("baseUrl: ",baseUrl);
+        // if (url.startsWith("/")) return `${baseUrl}${url}`;
+
+        // // Allows callback URLs on the same origin
+        // else if (new URL(url).origin === baseUrl) return url;
+        return baseUrl;
+    },
+    // authorized routes
+   
 }
