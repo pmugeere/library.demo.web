@@ -17,9 +17,6 @@ export const authCallBacks: NextAuthConfig["callbacks"] =
         return session;
     },
     async redirect({ url, baseUrl }) {
-        console.log("url: ",url);
-        
-        console.log("baseUrl: ",baseUrl);
         if (url.startsWith("/")) return `${baseUrl}${url}`;
 
         // Allows callback URLs on the same origin

@@ -7,7 +7,10 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
     callbacks: authCallBacks,
     pages: {
         signIn: "/auth/signin",
-        // signOut: "/auth/signout"
+        signOut: "/auth/signout"
+    },
+    theme: {
+        colorScheme: "light",
     },
     secret: process.env.NEXTAUTH_SECRET
 });

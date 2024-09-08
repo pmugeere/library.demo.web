@@ -2,7 +2,7 @@
 
 import { providerMap } from "@/lib/auth/auth-providers"
 import { useSearchParams } from "next/navigation";
-import {signInUser} from "@/lib/signin-action";
+import { signInUser } from "@/lib/signin-action";
 
 export default function ProvidersList() {
     const searchParams = useSearchParams();
