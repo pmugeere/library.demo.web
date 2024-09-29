@@ -1,4 +1,5 @@
 import { ProvidersList } from "@/components/signin"
+import { Suspense } from "react"
 
 const SignInPage = () => {
     return (
@@ -6,7 +7,9 @@ const SignInPage = () => {
             <h1 className="text-lg leading-tight tracking-tight text-gray-900 md:text-xl">
                 Sign in to your account
             </h1>
-            <ProvidersList />
+            <Suspense>
+                <ProvidersList />
+            </Suspense>
         </div>
     )
 }
