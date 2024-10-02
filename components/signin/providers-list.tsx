@@ -3,7 +3,7 @@
 import { providerMap } from "@/lib/auth/auth-providers"
 import { useSearchParams } from "next/navigation";
 import { signInUser } from "@/lib/signin-action";
-import { FormButton } from "../Buttons";
+import { FormButton } from "../buttons";
 
 export default function ProvidersList() {
     const searchParams = useSearchParams();

@@ -1,6 +1,6 @@
 import { signOut } from "next-auth/react";
 import { FC, useState } from "react";
-import { FormButton } from "../Buttons";
+import { FormButton } from "../buttons";
 
 
 interface SignoutButtonProps {
