@@ -1,4 +1,6 @@
-import BooCover from './BooCover'
+import { FC } from 'react';
+
+import BookCover from './book-cover'
 
 interface BookCardProps {
     id: string;
@@ -8,16 +10,16 @@ interface BookCardProps {
     language: string;
     price: number;
     imgUrl: string;
-    onClick: (id: string) => void
+    handleOnClick: (id: string) => void
 }
 
-const BookCard = ({ id, title, author, format, language, price, imgUrl, onClick }: BookCardProps) => {
+const BookCard : FC<BookCardProps>=({ id, title, author, format, language, price, imgUrl, handleOnClick }) => {
 
     return (
         <div
         className='
         book-item 
-        bg-slate-50 
+        bg-qh-slate-50 
         w-full h-full 
         px-3 py-3 rounded-md 
         drop-shadow-lg 
@@ -27,10 +29,10 @@ const BookCard = ({ id, title, author, format, language, price, imgUrl, onClick 
         hover:shadow-lg 
         hover:cursor-pointer
         duration-300'
-            onClick={() => onClick(id)}
+        onClick={() => handleOnClick(id)}
         >
             <div className='w-full flex flex-col items-center'>
-                <BooCover title={title} imgUrl={imgUrl} />
+                <BookCover title={title} imgUrl={imgUrl} />
             </div>
             <div className='w-full flex flex-col items-left mt-5 ml-4 gap-3'>
                 <div className="flex flex-col ">
